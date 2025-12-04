@@ -7,7 +7,7 @@ const apiURL = "https://api.api-ninjas.com/v2/randomquotes";
 
 async function getQuote() {
     try {
-        btnEl.innerText = "Загрузка...";
+        btnEl.innerText = "Loading...";
         btnEl.disabled = true;
 
         quoteEl.style.opacity = "0";
@@ -29,13 +29,13 @@ async function getQuote() {
         void quoteEl.offsetWidth;
         quoteEl.style.animation = "fadeIn 0.6s forwards";
 
-        btnEl.innerText = "Новая цитата";
+        btnEl.innerText = "New quote";
         btnEl.disabled = false;
     }
     catch (error) {
-        quoteEl.innerText = "Произошла ошибка. Попробуйте снова.";
+        quoteEl.innerText = "An error occurred. Please try again.";
         authorEl.innerText = "";
-        btnEl.innerText = "Новая цитата";
+        btnEl.innerText = "New quote";
         btnEl.disabled = false;
     }
 }
